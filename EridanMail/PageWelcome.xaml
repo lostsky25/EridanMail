@@ -1,0 +1,173 @@
+﻿<Page x:Class="EridanMail.PageWelcome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EridanMail"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      d:DesignHeight="742" d:DesignWidth="442"
+      Background="#212121"
+      Title="PageWelcome">
+
+    <ui:SimpleStackPanel Spacing="20">
+        
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Text="Welcome to Eridan" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="35"
+            Margin="0,40,0,0"/>
+        <Border BorderBrush="#474747" BorderThickness="2" HorizontalAlignment="Left" Height="1"  VerticalAlignment="Top" Width="442" Margin="70,0,70,0" RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Text="The best secure email" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="25"
+            Margin="0,0,0,0"/>
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Panel.ZIndex="11"
+            Text="experience ever designed" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="25"
+            Margin="0,-20,0,0"/>
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Panel.ZIndex="11"
+            Text="for a desktop device" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="25"
+            Margin="0,-20,0,0"/>
+        <Canvas Height="300" Margin="0,-37,0,37">
+            <Grid Panel.ZIndex="10" Height="300">
+                <Image Source="Resources\PageWelcome\shadow2.png" Width="442" Margin="0,-45,0,97" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="Resources\PageWelcome\shadow2.png" Width="442" Margin="0,185,0,-185"/>
+
+
+            </Grid>
+            <Image x:Name="imgGoogle" Panel.ZIndex="6" Source="Resources\PageWelcome\google_logo.png" Width="70" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="0" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="imgYahoo" Source="Resources\PageWelcome\yahoo_logo.png" Width="100" Height="60" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="90" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="imgMicrosoftOffice" Source="Resources\PageWelcome\microsoft_office_logo.png" Width="100" Height="60" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="90" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="imgOutlook" Source="Resources\PageWelcome\outlook_logo.png" Width="40" Height="60" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="-50" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="imgRambler" Source="Resources\PageWelcome\rambler_logo.png" Width="90" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="20" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="imgYandex" Source="Resources\PageWelcome\yandex_logo.png" Width="100" Height="60" RenderTransformOrigin="0.5,0.5" Canvas.Left="60" Canvas.Top="80">
+                <Image.RenderTransform>
+                    <TranslateTransform X="210" Y="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Image.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgGoogle"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:4" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgYahoo"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:5" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgMicrosoftOffice"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:3" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgOutlook"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:5" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgRambler"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:8" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard>
+                            <Storyboard TargetName="imgYandex"
+            TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation Duration="0:0:5" From="-35" To="250" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+        </Canvas>
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Text="By continuing you agree to accept our" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="15"
+            Margin="0,9,0,0"/>
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="15"
+            Margin="0,-20,0,0">
+            <Hyperlink
+                TextDecorations=""
+                NavigateUri="http://somesite.example">
+                terms of service 
+            </Hyperlink>
+                and
+            <Hyperlink
+                TextDecorations=""
+                NavigateUri="http://somesite.example">
+                privacy policy
+            </Hyperlink>
+        </TextBlock>
+
+        <Button 
+            Content="Continue" 
+            Style="{StaticResource AccentButtonStyle}"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            Width="280" 
+            Height="42"
+            FontSize="18"
+            FontWeight="Bold"
+            Margin="0, 5, 0, 0"
+            Background="#FF0074F9" Click="Button_Click_Continue"/>
+    </ui:SimpleStackPanel>
+</Page>
