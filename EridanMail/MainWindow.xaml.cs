@@ -21,11 +21,15 @@ namespace EridanMail
     /// </summary>
     public partial class MainWindow : Window
     {
-        PageWelcome pageWelcome;
+        public static PageWelcome pageWelcome;
+        public static PageGetStarted pageGetStarted;
+        public static PageAddAccount pageAddAccount;
         public MainWindow()
         {
             InitializeComponent();
             pageWelcome = new PageWelcome();
+            pageGetStarted = new PageGetStarted();
+            pageAddAccount = new PageAddAccount();
             frMain.Navigate(pageWelcome);
         }
 

@@ -1,0 +1,196 @@
+﻿<Page x:Class="EridanMail.PageAddAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:local="clr-namespace:EridanMail"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      d:DesignHeight="742" d:DesignWidth="442"
+      Background="#212121"
+      Title="PageWelcome">
+
+    <Page.Resources>
+        <System:Int32 x:Key="iconWidth">40</System:Int32>
+        <System:Int32 x:Key="panelHeight">55</System:Int32>
+        <System:Int32 x:Key="iconMargin">20</System:Int32>
+        <System:Int32 x:Key="textTitleSize">15</System:Int32>
+        <System:Int32 x:Key="textDescriptionWidth">260</System:Int32>
+        
+        <Style x:Key="myStyle" TargetType="{x:Type StackPanel}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Gray"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Page.Resources>
+
+    <ui:SimpleStackPanel Spacing="0">
+        <TextBlock 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Text="Add Account" 
+            Style="{StaticResource HeaderTextBlockStyle}"
+            FontSize="25"
+            FontWeight="DemiBold"
+            Margin="0,7,0,0"/>
+
+        <StackPanel Orientation="Vertical" Margin="0, 36, 0, 0">
+
+            <StackPanel
+                MouseLeftButtonDown="Gmail_MouseLeftButtonDown"
+                Margin="0,10,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image
+                    Source="Resources/PageAddAccount/google_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Gmail"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/icloud_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="iCloud"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/outlook_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Outlook"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/exchange_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Exchange"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/office365_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Office365"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/yahoo_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Yahoo"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+
+            <StackPanel 
+                Margin="0,0,0,0" 
+                Height="{Binding Source={StaticResource panelHeight}}" 
+                Orientation="Horizontal" 
+                Style="{StaticResource myStyle}">
+                <Grid Width="20"></Grid>
+                <Image  
+                    Source="Resources/PageAddAccount/icloud_logo.png" 
+                    Width="{Binding Source={StaticResource iconWidth}}"/>
+                <TextBlock 
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="{Binding Source={StaticResource textDescriptionWidth}}"
+                Text="Other"
+                Style="{StaticResource HeaderTextBlockStyle}"
+                FontSize="{Binding Source={StaticResource textTitleSize}}"
+                FontWeight="Light"
+                Margin="10,10,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </ui:SimpleStackPanel>
+</Page>
